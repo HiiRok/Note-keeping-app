@@ -1,0 +1,225 @@
+:root {
+    --background: #ffffff;
+    --text-primary: #000;
+    --text-secondary: #f5ba13;
+    --accent: #8e05c2;
+    --border: #333;
+    --form-bg: #fff;
+  }
+  
+  [data-theme='dark'] {
+    --background: #1f1e1e;
+    --text-primary: #fff;
+    --text-secondary: #f5ba13;
+    --accent: #8e05c2;
+    --border: #808080;
+    --form-bg: #191919;
+  }
+  
+  
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    font-family: "Montserrat", sans-serif;
+  }
+  
+  .app {
+    background-color: var(--background);
+    color: var(--text-primary);
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    transition: all .5s;
+  }
+  
+  
+  .login h1 {
+    text-align: center;
+    margin: -6rem 0 2rem;
+    font-size: 48px;
+  }
+  
+  h2 {
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  .theme-toggle i {
+    font-size: 2rem;
+    cursor: pointer;
+  }
+  
+  .theme-toggle {
+    position: fixed;
+    top: 100px;
+    right: 10px;
+    width: 5%;
+    text-align: center;
+    padding: 10px;
+    background-color: var(--background);
+  }
+  
+  
+  
+  @media screen and (max-width: 478px) {
+    .login {
+      width: 95%;
+    }
+  }
+
+.container {
+display: flex;
+flex-direction: column;
+align-items: center;
+min-height: 100vh;
+}
+  
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px; 
+  background-color: #1375f5;
+  color: var(--text-primary);
+  padding: 16px 32px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  transition: background-color 0.5s;
+}
+  
+  header h1 {
+    color: var(--background);
+    font-family: "McLaren", cursive;
+    font-weight: 200;
+    font-size: 26px;
+  }
+  
+  footer {
+    margin-top: auto;
+    text-align: center;
+    height: 2.5rem;
+    background-color: var(--background);
+  }
+  
+  footer p {
+    color: #ccc;
+  }
+
+  .notes-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    margin-top: -500px;
+    flex-grow: 1; 
+    align-items: flex-start; 
+  }
+
+  .button-container {
+    display: flex;
+    gap: 10px; 
+  }
+  
+  .note {
+    border-radius: 7px;
+    box-shadow: 0 2px 5px rgb(175, 175, 175);
+    padding: 10px;
+    margin: 16px;
+    float: left;
+    margin-right: 0;
+    transition: background-color 0.5s;
+    min-width: 200px;
+    max-width: 300px;
+    height: auto; 
+    overflow: auto;
+  }
+
+  .note.pinned {
+    border: 5px solid red;
+    box-shadow: 0 0 10px red;
+    border-radius: 10%;
+    transform: scale(1.05);
+    transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+    color:red;
+  }
+  
+  .note.pinned:hover {
+    transform: scale(1.1);
+  }
+  
+  .note.pinned:active {
+    transform: scale(1.05);
+  }
+  
+  
+  .note h1 {
+    font-size: 1rem;
+    margin-bottom: 6px;
+  }
+  
+  .note p {
+    color: var(--text-primary);
+    font-size: 1rem;
+    margin-bottom: 10px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+  
+  .note button {
+    position: relative;
+    float: right;
+    color: #f88651;
+    border: none;
+    background: none;
+    cursor: pointer;
+    outline: none;
+  }
+  
+
+  .fform {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 480px;
+    background: var(--background);
+    color: var(--text-primary);
+    padding: 15px;
+    border-radius: 7px;
+    box-shadow: 0 1px 5px rgb(138, 137, 137);
+  }
+  
+  
+  .fform input,
+  .fform textarea {
+    background: var(--background);
+    color: var(--text-primary);
+    width: 100%;
+    border: none;
+    padding: 4px;
+    outline: none;
+    font-size: 1.2em;
+    font-family: inherit;
+    resize: none;
+  }
+  
+  .fform button {
+    position: absolute;
+    right: 18px;
+    bottom: -18px;
+    background: var(--text-secondary);
+    color: var(--text-primary);
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    outline: none;
+  }
+  
