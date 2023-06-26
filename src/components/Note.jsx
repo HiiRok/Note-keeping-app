@@ -10,7 +10,6 @@ export default function Note(props) {
   useEffect(() => {
     const savedColor = localStorage.getItem(`noteColor-${props.id}`);
     const savedPinned = localStorage.getItem(`notePinned-${props.id}`);
-    const savedCreationTime = localStorage.getItem(`noteCreationTime-${props.id}`);
 
     if (savedColor) {
       setNoteColor(savedColor);
@@ -19,19 +18,34 @@ export default function Note(props) {
     if (savedPinned) {
       setPinned(savedPinned === 'true');
     }
+  }, [props.id]);
 
+
+  useEffect(() => {
+    const savedCreationTime = localStorage.getItem(`noteCreationTime-${props.id}`);
+  
     if (savedCreationTime) {
       setCreationTime(savedCreationTime);
     } else {
       setCreationTime(new Date().toLocaleString());
     }
   }, [props.id]);
+  
+
+
+
+
+
+  useEffect(() => {
+    localStorage.setItem(`noteCreationTime-${props.id}`, creationTime);
+    console.log(`Note ${props.id} creation time saved: ${creationTime}`);
+  }, [props.id, creationTime]);
+  
 
   useEffect(() => {
     localStorage.setItem(`noteColor-${props.id}`, noteColor);
     localStorage.setItem(`notePinned-${props.id}`, pinned.toString());
-    localStorage.setItem(`noteCreationTime-${props.id}`, creationTime);
-  }, [props.id, noteColor, pinned, creationTime]);
+  }, [props.id, noteColor, pinned]);
 
   function handleClick() {
     props.onDelete(props.id);
@@ -82,7 +96,7 @@ export default function Note(props) {
         </button>
       </div>
 
-      <p className="creation-time">{creationTime}</p>
+      <p className="creation-time">{creationTime || 'Loading...'}</p>
     </div>
   );
 }
