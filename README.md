@@ -1,4 +1,4 @@
-# Note Keeper App (deployed link - hirok-note-keeping.netlify.app)
+# Note Keeper App (deployed link - http://hirok-note-keeping.netlify.app)
 
 A sleek and feature-rich note-taking application built with React, Firebase, and dark mode support.
 
