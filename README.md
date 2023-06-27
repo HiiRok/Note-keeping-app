@@ -62,7 +62,8 @@ _Dashboard in Dark mode and one pinned note._
  
    npm start
 
-The app will be accessible at http://localhost:3000.
+   The app will be accessible at http://localhost:3000.
+
 
 ##Usage
 - Sign up or log in to start using the Note Keeper app.
