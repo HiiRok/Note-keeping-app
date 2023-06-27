@@ -27,7 +27,7 @@ export default function Note(props) {
     if (savedCreationTime) {
       setCreationTime(savedCreationTime);
     } else {
-      setCreationTime(new Date().toLocaleString());
+      setCreationTime(new Date().toLocaleDateString());
     }
   }, [props.id]);
   
@@ -94,9 +94,10 @@ export default function Note(props) {
         <button className="pin-button" onClick={handleTogglePin}>
           {pinned ? <RiPushpin2Line /> : <RiPushpin2Fill />}
         </button>
+        <p className="creation-time">{creationTime || 'Loading...'}</p>
       </div>
 
-      <p className="creation-time">{creationTime || 'Loading...'}</p>
+      
     </div>
   );
 }

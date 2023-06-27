@@ -21,6 +21,7 @@ export default function CustomPage() {
   }, [notes]);
 
   function addNote(note) {
+    localStorage.clear();
     setNotes((prevNotes) => [...prevNotes, note]);
   }
 

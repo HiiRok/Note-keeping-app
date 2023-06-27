@@ -110,19 +110,23 @@ header {
     color: #ccc;
   }
 
+  
+
   .notes-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 16px;
+    gap: 10px;
     margin-top: -500px;
     flex-grow: 1; 
     align-items: flex-start; 
+    margin-top: -440px;
+
   }
 
   .button-container {
     display: flex;
-    gap: 10px; 
+    gap: 10px;
   }
   
   .note {
@@ -183,7 +187,7 @@ header {
 
   .fform {
     position: absolute;
-    top: 25%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 480px;
