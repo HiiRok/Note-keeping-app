@@ -45,13 +45,13 @@ _Dashboard in Dark mode and one pinned note._
    ```shell
    git clone https://github.com/your-username/note-keeper-app.git
 
-   ```shell
+ 
    cd note-keeper-app
 
-   ```shell
+   
    npm install
 
-   ```shell
+
    REACT_APP_FIREBASE_API_KEY=your_api_key
    REACT_APP_FIREBASE_AUTH_DOMAIN=your_auth_domain
    REACT_APP_FIREBASE_PROJECT_ID=your_project_id
@@ -59,7 +59,7 @@ _Dashboard in Dark mode and one pinned note._
    REACT_APP_FIREBASE_MESSAGING_SENDER_ID=your_messaging_sender_id
    REACT_APP_FIREBASE_APP_ID=your_app_id
 
-   ```shell
+ 
    npm start
 
 The app will be accessible at http://localhost:3000.
